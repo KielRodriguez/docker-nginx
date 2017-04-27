@@ -9,7 +9,7 @@ ENV WORK_DIR ejemplo
 RUN pwd
 RUN apt-get update; apt-get install -y nginx
 
-COPY ./mi-dockerfile.html /usr/share/nginx/html/
+COPY ./mi-dockerfile.html /var/www/html
 
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
